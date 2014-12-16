@@ -15,6 +15,11 @@ namespace PasswordSafe.Model
         private string userName;
         private string password;
         private string notes;
+
+        public Accounts()
+        {
+        }
+
         public Accounts(string account, string userName, string password, string notes)
         {
             this.account = account;

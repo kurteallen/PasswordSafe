@@ -2,8 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
 using System.Text;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace PasswordSafe.Model
@@ -12,10 +12,9 @@ namespace PasswordSafe.Model
     {
        private static SingletonList instance;
        private string passText = null;
-       //BindingList automatically updates the list box when the list changes
-       private static BindingList<Accounts> _list = null;
-
        
+        //BindingList automatically updates the list box when the list changes
+       private static BindingList<Accounts> _list = null;
 
        private SingletonList()
        {
@@ -42,9 +41,6 @@ namespace PasswordSafe.Model
            return value;
        }
        
-        
-
-
        public Boolean add(Accounts a)
        {
            bool b = false;
@@ -53,8 +49,6 @@ namespace PasswordSafe.Model
                _list.Add(a);
                b = true;
            }
-
-           System.Console.WriteLine("This is the number of items " + _list.Count);
            return b;
        }
        
