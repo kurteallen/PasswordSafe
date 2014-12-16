@@ -1,0 +1,66 @@
+      
+        
+        public  byte[] Encrypt(string strText)
+        {
+            //Create the DES Encryption Key
+            DESCryptoServiceProvider key = new DESCryptoServiceProvider();
+                       
+            // Create a memory stream.
+            MemoryStream ms = new MemoryStream();
+
+            // Create a CryptoStream using the memory stream and the
+            // CSP(cryptoserviceprovider) DES key.
+            CryptoStream crypstream = new CryptoStream(ms, key.CreateEncryptor(), CryptoStreamMode.Write);
+
+            // Create a StreamWriter to write a string to the stream.
+            StreamWriter sw = new StreamWriter(crypstream);
+
+            // Write the strText to the stream.
+            sw.WriteLine(strText);
+
+            // Close the StreamWriter and CryptoStream.
+            sw.Flush();
+            sw.Close();
+            crypstream.Flush();
+            crypstream.Close();
+
+            // Get an array of bytes that represents the memory stream.
+            byte[] buffer = ms.ToArray();
+
+            // Close the memory stream.
+            ms.Close();
+
+            // Return the encrypted byte array.
+            return buffer;
+        }
+
+       
+
+        public  string Decrypt(byte[] encryptText)
+        {
+
+            //Create the DES Encryption Key
+            DESCryptoServiceProvider key = new DESCryptoServiceProvider();
+            
+            // Create a memory stream to the passed buffer.
+            MemoryStream ms = new MemoryStream(encryptText);
+            // Create a CryptoStream using  memory stream and CSP DES key.
+            CryptoStream crypstream = new CryptoStream(ms, key.CreateDecryptor(), CryptoStreamMode.Read);
+
+            // Create a StreamReader for reading the stream.
+            StreamReader sr = new StreamReader(crypstream);
+
+            // Read the stream as a string.
+            string val = sr.ReadToEnd();
+
+            // Close the streams.
+            sr.DiscardBufferedData();
+            sr.Close();
+            crypstream.Close();
+            ms.Flush();
+            ms.Close();
+
+            return val;
+        }
+
+
