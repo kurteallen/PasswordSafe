@@ -18,9 +18,6 @@ namespace PasswordSafe.View
         public AcntList()
         {
             InitializeComponent();
-           
-
-
         }
 
         private void AcntList_Load(object sender, EventArgs e)
@@ -47,7 +44,7 @@ namespace PasswordSafe.View
             accountList.StartPosition = FormStartPosition.Manual;
             accountList.Location = new Point(this.Left + 100, this.Top + 100);
             accountList.ShowDialog();
-            this.setButtons();
+            
         }
 
         private void RemoveBtn_Click(object sender, EventArgs e)
@@ -56,20 +53,26 @@ namespace PasswordSafe.View
             MessageBoxButtons buttons = MessageBoxButtons.YesNo;
             result = MessageBox.Show("Do you wish to delete the account " + ((Accounts)listBox1.SelectedItem).Account + "?", "Delete Account", buttons);
             if (result == System.Windows.Forms.DialogResult.Yes)
+            {
                 SingletonList.Instance.GetList.Remove(((Accounts)listBox1.SelectedItem));
+                
+            }
             this.setButtons();
         }
 
         private void listBox1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             AccountEntryView accountList = new AccountEntryView((Accounts)listBox1.SelectedItem);
+            accountList.StartPosition = FormStartPosition.Manual;
+            accountList.Location = new Point(this.Left + 100, this.Top + 100);
             accountList.ShowDialog();
             this.setButtons();
         }
 
         private void AcntList_FormClosed(object sender, FormClosedEventArgs e)
         {
-            System.Environment.Exit(0);
+
+            ExitBtn.PerformClick();
         }
 
         private void ExitBtn_Click(object sender, EventArgs e)
@@ -106,17 +109,14 @@ namespace PasswordSafe.View
         private void searchToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MenuHelp menuHelp = new MenuHelp();
+            menuHelp.StartPosition = FormStartPosition.Manual;
+            menuHelp.Location = new Point(this.Left + 100, this.Top + 100);
             menuHelp.ShowDialog();
         }
-
-        
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ExitBtn.PerformClick();
         }
-
-
-
     }
 }

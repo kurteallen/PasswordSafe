@@ -44,11 +44,6 @@ namespace PasswordSafe
             
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void SaveBTN_Click(object sender, EventArgs e)
         {
             //Creating a boolean that determines the entry point to this method
@@ -76,7 +71,7 @@ namespace PasswordSafe
                 // then remove the account and add the new info (easier than finding the index
                 // and then changing the attributes for that object.
 
-                if(AccountTxtBox.Text.Trim().Equals(this.acc.Account.Trim()))
+                if (AccountTxtBox.Text.ToLower().Trim().Equals(this.acc.Account.ToLower().Trim()))
                 {
                     SingletonList.Instance.GetList.Remove(acc);
                     SingletonList.Instance.GetList.Add(new Accounts(AccountTxtBox.Text.Trim(), userNameTxtBox.Text, passwordTxtBox.Text, notesTxtBox.Text.Trim()));

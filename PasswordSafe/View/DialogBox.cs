@@ -20,7 +20,6 @@ namespace PasswordSafe
         public DialogBox()
         {
             InitializeComponent();
-            
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -30,7 +29,7 @@ namespace PasswordSafe
 
         private void button1_Click(object sender, EventArgs e)
         {
-            System.Console.WriteLine("about to launch");
+            
                 // retrieve encrypted password, compare against typed password.
                 // if correct then open list, otherwise show dialog box stating
                 // password incorrect and try again.
@@ -49,7 +48,6 @@ namespace PasswordSafe
                     MessageBox.Show("Password Incorrect");
                     passwordEntryTextBX.Clear();
                 }
-
         }
 
         private void DialogBox_Load(object sender, EventArgs e)

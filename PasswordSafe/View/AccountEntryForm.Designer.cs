@@ -104,7 +104,6 @@
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 6;
             this.label1.Text = "Notes";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // accountName
             // 
@@ -135,7 +134,6 @@
             // 
             // AccountEntryView
             // 
-            this.AcceptButton = this.saveBTN;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.button2;

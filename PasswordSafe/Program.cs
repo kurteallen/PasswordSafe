@@ -19,7 +19,6 @@ namespace PasswordSafe
         [STAThread]
         static void Main()
         {
-            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             
@@ -28,7 +27,6 @@ namespace PasswordSafe
             if (!File.Exists(file))
                 Application.Run(new ChangePassword());
             Application.Run(new DialogBox());     
-           
         }
     }
 }

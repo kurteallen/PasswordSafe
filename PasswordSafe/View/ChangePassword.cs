@@ -67,7 +67,7 @@ namespace PasswordSafe.View
 
         private void passBox1_TextChanged(object sender, EventArgs e)
         {
-            System.Console.WriteLine("passbox1 " + passBox1.Text);
+            
             if (Regex.IsMatch(passBox1.Text, @"^[\w]{6,}"))  
                 label3.Visible = false; //turn off warning
             else
@@ -91,7 +91,7 @@ namespace PasswordSafe.View
 
         private void passBox2_TextChanged(object sender, EventArgs e)
         {
-            System.Console.WriteLine("passbox2 " + passBox2.Text);
+            
             if (Regex.IsMatch(passBox2.Text, @"^[\w]{6,}"))
                 label3.Visible = false; //turn off warning
             else

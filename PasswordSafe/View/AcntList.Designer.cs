@@ -50,6 +50,7 @@
             this.listBox1.Location = new System.Drawing.Point(90, 43);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(186, 199);
+            this.listBox1.Sorted = true;
             this.listBox1.TabIndex = 0;
             this.listBox1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listBox1_MouseDoubleClick);
             // 
@@ -85,7 +86,7 @@
             // 
             // ExitBtn
             // 
-            this.ExitBtn.Location = new System.Drawing.Point(7, 217);
+            this.ExitBtn.Location = new System.Drawing.Point(7, 219);
             this.ExitBtn.Name = "ExitBtn";
             this.ExitBtn.Size = new System.Drawing.Size(75, 23);
             this.ExitBtn.TabIndex = 4;
@@ -178,6 +179,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "AcntList";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Accounts";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AcntList_FormClosed);
             this.Load += new System.EventHandler(this.AcntList_Load);

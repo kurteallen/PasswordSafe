@@ -90,6 +90,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "DialogBox";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Enter Password";
             this.Load += new System.EventHandler(this.DialogBox_Load);
             this.ResumeLayout(false);

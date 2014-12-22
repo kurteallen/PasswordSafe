@@ -101,13 +101,11 @@ namespace PasswordSafe.Model
                     this.enPass = encrypted;
                 }
             }
-            System.Console.WriteLine("The encrypted Text after Encrypter " + password);
-            
             return encrypted;
 
         }
 
-        public string Decryptr(string password)
+        public string DecryptRij(string password)
         {
             string plainText = null;
 
@@ -118,8 +116,6 @@ namespace PasswordSafe.Model
             
             RijndaelManaged des = new RijndaelManaged();
             
-            //System.Console.WriteLine("Encrypted Bytes read from file " + System.Text.Encoding.Default.GetString(cipherText));
-
             byte[] Salt = Encoding.ASCII.GetBytes(password.Length.ToString());
   
             PasswordDeriveBytes SecretKey = new PasswordDeriveBytes(password, Salt);
@@ -142,30 +138,12 @@ namespace PasswordSafe.Model
             {
                 return null;
             }
-            System.Console.WriteLine("This is the decrypted password from Decrypt " + plainText);
             return (plainText);
         }
   
         public Boolean VerifyPassword(string password)
         {
-            
-            // retrieve encrypted password and decrypt
-            Boolean status = true;
-
-            // Decrypt the recieved file
-
-            string decryptedPassword = this.Decryptr(password);
-
-            if (password.Equals(decryptedPassword))
-                System.Console.WriteLine("Passwords Match " + decryptedPassword);
-                
-            else
-            {
-                System.Console.WriteLine("Passwords did not match");
-                status = false;
-            }
-         
-            return status;
+           return password.Equals(this.DecryptRij(password));
         }
     }
 }

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChangePassword));
             this.passBox1 = new System.Windows.Forms.TextBox();
             this.passBox2 = new System.Windows.Forms.TextBox();
@@ -36,13 +35,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.OKBtn = new System.Windows.Forms.Button();
             this.CancelBtn = new System.Windows.Forms.Button();
-            this.errorOne = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorTwo = new System.Windows.Forms.ErrorProvider(this.components);
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.errorOne)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorTwo)).BeginInit();
             this.SuspendLayout();
             // 
             // passBox1
@@ -104,19 +99,6 @@
             this.CancelBtn.UseVisualStyleBackColor = true;
             this.CancelBtn.Click += new System.EventHandler(this.CancelBtn_Click);
             // 
-            // errorOne
-            // 
-            this.errorOne.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
-            this.errorOne.ContainerControl = this;
-            this.errorOne.RightToLeft = true;
-            // 
-            // errorTwo
-            // 
-            this.errorTwo.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
-            this.errorTwo.ContainerControl = this;
-            this.errorTwo.Icon = ((System.Drawing.Icon)(resources.GetObject("errorTwo.Icon")));
-            this.errorTwo.RightToLeft = true;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -169,10 +151,9 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ChangePassword";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Change Password";
             this.Load += new System.EventHandler(this.ChangePassword_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.errorOne)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorTwo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -186,8 +167,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button OKBtn;
         private System.Windows.Forms.Button CancelBtn;
-        private System.Windows.Forms.ErrorProvider errorOne;
-        private System.Windows.Forms.ErrorProvider errorTwo;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;

@@ -61,47 +61,16 @@ namespace PasswordSafe.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
-        /// </summary>
-        internal static System.Drawing.Icon check {
-            get {
-                object obj = ResourceManager.GetObject("check", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
-        /// </summary>
-        internal static System.Drawing.Icon cross {
-            get {
-                object obj = ResourceManager.GetObject("cross", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Password Safe is a small utility that safely stores all your passwords. All data is encrypted.  If you forget your login password to there is now way to de-crypt your data.
+        ///   Looks up a localized string similar to Password Safe is a small utility that safely stores and encrypts all your passwords. If you forget your login password there is no way to de-crypt your data.
         ///
-        ///Menu Help
-        ///=========
+        ///Password Safe 1.0
         ///
-        ///File (Exit)
-        ///-----------
+        ///Developed by Kurt Allen
+        ///www.kurtthedeveloper.com 
+        ///kurt@kurtthedeveloper.com 
         ///
-        ///Closes program. All accounts are automatically saved.
-        ///
-        ///Options (Change Password)
-        ///-------------------------
-        ///Changes your current password.  Your password is encrypted when stored.
-        ///
-        ///Help (Help)
-        ///-----------
-        ///Displays this window.
-        ///
-        ///Help (About...)
-        ///---------------
-        ///Displays vers [rest of string was truncated]&quot;;.
+        ///This software is provided &apos;as-is&apos;, without any express or implied warranty. In no event will the authors be held liable for any damages arising from the use of this software.
+        ///.
         /// </summary>
         internal static string Help {
             get {
@@ -126,15 +95,6 @@ namespace PasswordSafe.Properties {
             get {
                 object obj = ResourceManager.GetObject("KeyIcon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to .
-        /// </summary>
-        internal static string psdata {
-            get {
-                return ResourceManager.GetString("psdata", resourceCulture);
             }
         }
     }

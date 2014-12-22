@@ -27,8 +27,7 @@ namespace PasswordSafe.Model
            get
            {
                if (instance == null)
-                   lock (typeof(SingletonList))
-                       instance = new SingletonList();
+                   instance = new SingletonList();
                return instance;
            }
        }
@@ -36,7 +35,7 @@ namespace PasswordSafe.Model
        public Boolean MyContains(string a) 
        {
            bool value = false;
-           if (_list.Any(l => l.Account.Equals(a)))
+           if (_list.Any(l => l.Account.ToLower().Trim().Equals(a.ToLower().Trim())))
                value = true;
            return value;
        }
